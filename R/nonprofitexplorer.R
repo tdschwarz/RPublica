@@ -10,7 +10,6 @@ np_search <- function(q=NULL, order=NULL, sort=NULL, state=NULL, ntee=NULL, subs
     names(args)[names(args)=='ntee'] <- curl_escape('ntee[id]')
     names(args)[names(args)=='subsection'] <- curl_escape('c_code[id]')
     args <- paste('?', paste(names(args), args, sep='=', collapse='&'), sep='')
-    print(args)
     
     out <- ppQuery('search',
                    'https://projects.propublica.org/nonprofits/api/v2/',
