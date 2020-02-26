@@ -12,7 +12,7 @@ np_search <- function(q=NULL, order=NULL, sort=NULL, state=NULL, ntee=NULL, subs
     args <- paste('?', paste(names(args), args, sep='=', collapse='&'), sep='')
     
     out <- ppQuery('search',
-                   'https://projects.propublica.org/nonprofits/api/v2/',
+                   'https://projects.propublica.org/nonprofits/api/v2/search.json?',
                    args=args, ...)
     return(out)
 }
