@@ -19,6 +19,6 @@ np_search <- function(q=NULL, order=NULL, sort=NULL, state=NULL, ntee=NULL, subs
 
 np_org <- function(ein, ...){
     out <- ppQuery(paste('organizations',ein,sep='/'),
-                   'https://projects.propublica.org/nonprofits/api/v2/', ...)
+                   'https://projects.propublica.org/nonprofits/api/v2/search.json?', ...)
     return(out)
 }
